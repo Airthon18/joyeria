@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Anillo</title>
+    <link rel="stylesheet" href="anillo_1.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="image-gallery">
+            <img src="img/anillo_blanco.png" alt="Miniatura 2" onclick="changeImage('blanco')">
+            <img src="img/anillos_rosa.png" alt="Miniatura 3" onclick="changeImage('rosa')">
+            <img src="img/fondo_ani1.png" alt="Miniatura 4" onclick="changeImage('fondo1')">
+            <img src="img/fondo_ani.png" alt="Miniatura 1" onclick="changeImage('fondo')">
+            <img src="img/fondo_ani2.png" alt="Miniatura 1" onclick="changeImage('fondo2')">
+            <!-- Añade más miniaturas según sea necesario -->
+        </div>
+        <div class="product-image">
+            <img id="productImage" src="img/fondo_ani.png" alt="Anillo en oro blanco de 18K con rubíes y brillantes">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Anillo en oro blanco de 18K con rubíes y brillantes</h1>
+            <p class="price">$1,600.00 USD</p>
+            <div class="description">
+                <h2>Detalles del Anillo</h2>
+                <p>Este anillo está hecho de oro blanco de 18K con rubíes y brillantes incrustados.</p>
+                <ul>
+                    <li>Material: Oro blanco de 18K</li>
+                    <li>Piedras: Rubíes y brillantes</li>
+                    <li>Tamaño: Opciones de tallas disponibles</li>
+                    <li>Grabado personalizado disponible</li>
+                </ul>
+            </div>
+            <div class="color-selection">
+                <h3>Color:</h3>
+                <label><input type="radio" name="color" value="oro blanco" checked onclick="changeImage('blanco')"> Blanco</label>
+                <label><input type="radio" name="color" value="oro amarillo" onclick="changeImage('rosa')"> Rosa</label>
+            </div>
+            <p class="free-shipping">Envío Gratis</p>
+            <a id="whatsappLink" href="#" class="add-to-cart-btn" onclick="sendWhatsApp()">Añadir a Carrito</a>
+        </div>
+    </div>
+    <script src="anillo_1.js"></script>
+<div class="product-recommendations">
+    <h2 class="recommendation-title">También te puede interesar</h2>
+    <div class="products-container">
+        <div class="product-item">
+            <img src="img/anillos.jpeg" alt="Medio rivière en oro amarillo de 18K con brillantes">
+            <p class="product-title">Medio rivière en oro amarillo de 18K con brillantes</p>
+            <p class="product-price">$1,590.00 USD</p>
+        </div>
+        <div class="product-item">
+            <img src="img/anillos.jpeg" alt="Anillo Zodiacal Capricornio en oro amarillo de 18K con granate y brillantes">
+            <p class="product-title">Anillo Zodiacal Capricornio en oro amarillo de 18K con granate y brillantes</p>
+            <p class="product-price">$555.00 USD</p>
+        </div>
+        <div class="product-item">
+            <img src="img/anillos.jpeg" alt="Anillo Zodiacal Libra en oro amarillo de 18K con citrino y brillantes">
+            <p class="product-title">Anillo Zodiacal Libra en oro amarillo de 18K con citrino y brillantes</p>
+            <p class="product-price">$555.00 USD</p>
+        </div>
+        <div class="product-item">
+            <img src="img/anillos.jpeg" alt="Anillo Amma en oro amarillo de 18K corazón calado con brillantes">
+            <p class="product-title">Anillo Amma en oro amarillo de 18K corazón calado con brillantes</p>
+            <p class="product-price">$760.00 USD</p>
+        </div>
+    </div>
+</div>
+<script src="anillo_1.js"></script>
+</body>
+</html>

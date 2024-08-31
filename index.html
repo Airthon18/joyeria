@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonceRoyale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>🚚 Realiza tu pedido y recíbelo en 2 días envio GRATIS</p>
+        </div>
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Icono hamburguesa (solo en móvil) -->
+            <div class="logo">
+                <h1>P<span class="diamond"></span>nce</h1>
+            </div>
+            
+            
+            <ul class="nav-links">
+                <li><a href="#">Anillos de Compromiso</a></li>
+                <li><a href="#">Joyas</a></li>
+                <li><a href="#">Colecciones</a></li>
+                <li><a href="#">Joyería Masculina</a></li>
+                <li><a href="#">Lo ultimo</a></li>
+                <li><a href="#">Precios especiales</a></li>
+                <li><a href="#">Regalos</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+            <!-- Ícono de búsqueda -->
+            <div class="nav-icons">
+                <a href="#" id="searchIcon" onclick="toggleSearchBar()">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div id="searchBar" class="search-bar" style="display: none;">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            
+        <!-- Menú móvil oculto por defecto (solo visible en móvil) -->
+        <div id="mobileMenu" class="mobile-menu">
+            <span class="close-icon" onclick="toggleMenu()">✖</span>
+            <ul class="nav-links-mobile">
+                <li><a href="#">Anillos de Compromiso</a></li>
+                <li><a href="#">Joyas</a></li>
+                <li><a href="#">Colecciones</a></li>
+                <li><a href="#">Joyería Masculina</a></li>
+                <li><a href="#">Lo ultimo</a></li>
+                <li><a href="#">Precios especiales</a></li>
+                <li><a href="#">Regalos</a></li>
+                <li><a href="#">Servicios</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide"><img src="img/carrou1.jpg" alt="Imagen 0"></div>
+            <div class="slide"><img src="img/carrou2.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="img/carrou3.jpg" alt="Imagen 2"></div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    
+
+    </div>
+    <h2 class="fancy-title">Categorías</h2>
+    <section class="categories">
+        <a href="anillos.html" class="category-link">
+            <div class="category-item">
+              <img src="img/categoria_anillos.jpeg" alt="Anillo con esmeralda" />
+              <h3>Anillos</h3>
+            </div>
+          </a>
+        <div class="category-item">
+          <img src="img/categoria_collares.jpeg" alt="Collares" />
+          <h3>Collares</h3>
+        </div>
+        <div class="category-item">
+          <img src="img/categoria_aretes.jpeg" alt="Aretes" />
+          <h3>Aretes</h3>
+        </div>
+        <div class="category-item">
+          <img src="img/categoria_brazaletes.jpeg" alt="Brazaletes" />
+          <h3>Brazaletes</h3>
+        </div>
+      </section>
+      <h2 class="special-pricing-title">Precios Especiales en Nuestra Colección</h2>
+      <div class="product-carousel">
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="img/fotopru.jpg" alt="Producto 1">
+            <p>Aretes en oro amarillo de 18K con calcedonia</p>
+            <div class="price">
+                <span class="old-price">$1500.00 USD</span>
+                <span class="new-price">$1200.00 USD</span>
+                <span class="discount-label">¡En descuento!</span>
+            </div>
+        </div>   
+    </div>
+    
+    <footer>
+        <div class="footer-top">
+            <h2 class="footer-title">PonceRoyale</h2>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Servicio al Cliente</h4>
+                <ul>
+                    <li><a href="#">Agenda tu Cita</a></li>
+                    <li><a href="#">Política de Pagos</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                    <li><a href="#">Política de Cambios y/o Devoluciones</a></li>
+                    <li><a href="#">Promociones Vigentes</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <ul>
+                    
+                    <li><a href="#">Nuestro Taller</a></li>
+                    
+                    <li><a href="#">Guía de Tallas</a></li>
+                    <li><a href="#">Entalle de Anillos</a></li>
+                    <li><a href="#">Cuidado de Joyas</a></li>
+                    <li><a href="#">Garantía de Joyas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>(01) 372 - 6060</p>
+                <p>Lugar xxxxxx</p>
+                <p><a href="">ponceroyale@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PonceRoyale. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <div class="whatsapp-float">
+    <a href="https://wa.me/902179722" target="_blank">
+        <div class="tooltip">Te ayudamos</div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+      
+      
+        
+      
+          
+        
+        
+      
+      
+      
+    <script src="script.js"></script>
+</body>
+</html>

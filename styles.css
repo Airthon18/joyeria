@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.top-bar {
+    background-color: #f4c842; /* Fondo dorado */
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333; /* Texto en color negro */
+}
+
+header {
+    border-bottom: 1px solid #f4c842; /* Borde dorado */
+}
+
+/* Estilos generales para escritorio */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.logo h1 {
+    font-size: 3rem; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-style: italic; /* Aplicar cursiva */
+    color: #b8860b; /* Un tono dorado similar al de .fancy-title */
+    letter-spacing: 0.1rem; /* Espaciado entre letras para mayor legibilidad */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+}
+
+
+.logo .diamond {
+    display: inline-block;
+    width: 1.2em; /* Ajusta el tamaño de la imagen en relación al tamaño de la fuente */
+    height: 1.2em; /* Ajusta el tamaño de la imagen en relación al tamaño de la fuente */
+    background-image: url('img/diam.png'); /* Ruta a la imagen del diamante */
+    background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+
+
+/* Estilos para la barra de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333; /* Texto en color negro */
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+    color: #f4c842; /* Efecto hover dorado */
+    border-bottom: 2px solid #f4c842; /* Borde dorado en hover */
+}
+
+/* Ocultar el menú hamburguesa en escritorio */
+.menu-icon {
+    display: none;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+    transition: left 0.4s ease;
+    color: #f4c842; /* Texto dorado */
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Estilos para los enlaces dentro del menú móvil */
+.mobile-menu li a {
+    text-decoration: none;
+    color: #333; /* Texto en color negro */
+    font-size: 1.2rem;
+    padding: 15px 0;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.mobile-menu li a:hover {
+    color: #f4c842; /* Efecto hover dorado */
+}
+
+/* Estilos para la cruz de cerrar en el menú móvil */
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333; /* Color negro para el icono */
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: #f4c842; /* Efecto hover dorado para la cruz de cerrar */
+}
+
+.nav-links-mobile {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-links-mobile li {
+    margin: 20px 0;
+}
+
+.nav-links-mobile li a {
+    text-decoration: none;
+    color: #333; /* Texto en color negro */
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links-mobile li a:hover {
+    color: #f4c842;
+    border-bottom: 2px solid #f4c842;
+}
+
+/* Efectos en la lupa */
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons i {
+    font-size: 20px;
+    color: #333; /* Icono negro */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 0;
+}
+
+.nav-icons i:hover {
+    color: #f4c842;
+}
+
+.search-bar {
+    width: 180px;
+    padding: 5px;
+    background-color: #f4c842; /* Fondo dorado */
+    border: 1px solid #333; /* Borde negro */
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: #333; /* Texto negro */
+    background-color: transparent;
+}
+
+.search-bar input::placeholder {
+    color: #333; /* Placeholder negro */
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .nav-icons i {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        width: 150px;
+        padding: 4px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-icons i {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        width: 120px;
+        padding: 3px;
+    }
+
+    .search-bar input {
+        font-size: 10px;
+        padding: 3px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móvil) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        color: #333; /* Icono de menú negro */
+        cursor: pointer;
+    }
+
+    .logo h1 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.8rem;
+    }
+
+    .nav-icons {
+        display: flex;
+    }
+}
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Cambiado a 0.5s para un deslizamiento suave */
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+/* Estilos para dispositivos móviles */
+
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 25vh; /* Ajusta la altura para móviles */
+        z-index: -1;
+    }
+
+    .slide {
+        height: 100%;
+    }
+
+    .slide img {
+        object-fit: cover;
+    }
+
+    .dots {
+        bottom: 10px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 3px;
+    }
+}
+
+
+/* Contenedor de las categorías */
+
+.fancy-title {
+    font-size: 48px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #b8860b; /* Un tono dorado para reflejar lujo */
+    text-align: center; /* Centrado */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 40px 0 -10px; /* Ajuste del margen superior */
+    position: relative;    
+}
+
+.fancy-title::before, .fancy-title::after {
+    content: ''; /* Agregar líneas decorativas antes y después del texto */
+    position: absolute;
+    width: 100px; /* Longitud de las líneas */
+    height: 2px; /* Grosor de las líneas */
+    background-color: #b8860b; /* Mismo color dorado que el texto */
+    top: 50%; /* Alinear verticalmente con el texto */
+    transform: translateY(-50%); /* Centrar verticalmente */
+}
+
+.fancy-title::before {
+    left: 35%; /* Ajusta la separación desde el borde izquierdo */
+}
+
+.fancy-title::after {
+    right: 35%; /* Ajusta la separación desde el borde derecho */
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    .fancy-title {
+        font-size: 42px; /* Tamaño de la fuente ligeramente reducido */
+        letter-spacing: 1px; /* Espaciado de letras reducido */
+        margin: 30px 0 -10px; /* Ajuste del margen superior para pantallas medianas */
+    }
+
+    .fancy-title::before, .fancy-title::after {
+        width: 80px; /* Longitud de las líneas reducida */
+        height: 1px; /* Grosor de las líneas reducido */
+    }
+
+    .fancy-title::before {
+        left: 25%; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .fancy-title::after {
+        right: 25%; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .fancy-title {
+        font-size: 32px; /* Tamaño de la fuente aumentado para pantallas pequeñas */
+        letter-spacing: 0.5px; /* Espaciado de letras aún más reducido */
+        margin: 20px 0 -10px; /* Ajuste del margen superior para pantallas muy pequeñas */
+        z-index: -1;
+    }
+
+    .fancy-title::before, .fancy-title::after {
+        width: 60px; /* Longitud de las líneas ajustada */
+        height: 1px; /* Grosor de las líneas ajustado */
+    }
+
+    .fancy-title::before {
+        left: 5%; /* Ajuste para pantallas muy pequeñas */
+    }
+
+    .fancy-title::after {
+        right: 5%; /* Ajuste para pantallas muy pequeñas */
+    }
+}
+
+
+
+
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en modo PC */
+    gap: 55px; /* Espacio entre los items */
+    padding: 50px; /* Padding ajustado */
+    max-width: 1500px; /* Ancho máximo ajustado */
+    margin: 0 auto;
+}
+
+.category-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Asegura que todos tengan el mismo ancho */
+    height: 350px; /* Altura ajustada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Estira y recorta la imagen para que mantenga proporción y llene el contenedor */
+}
+
+.category-item h3 {
+    font-size: 20px; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0; /* Margen ajustado */
+}
+
+/* Ajustes para pantallas medianas (móvil y tablets) */
+@media (max-width: 768px) {
+    .categories {
+        font-size: 46px; /* Reducir tamaño de fuente en móviles */
+        grid-template-columns: repeat(2, 1fr); /* 2x2 en pantallas medianas */
+        gap: 20px; /* Espacio entre los items */
+    }
+
+    .category-item {
+        height: 200px; /* Ajuste de altura para pantallas más pequeñas */
+    }
+}
+
+/* Contenedor del carrusel */
+.special-pricing-title {
+    top: -20px;
+    font-size: 48px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #b8860b; /* Un tono dorado para reflejar lujo */
+    text-align: center; /* Centrado */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 10px; /* Ajuste del padding superior */
+    margin: 40px 0 -10px; /* Margen estándar */
+    position: relative;    
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    .special-pricing-title {
+        
+        font-size: 42px; /* Tamaño de la fuente ligeramente reducido */
+        letter-spacing: 1px; /* Espaciado de letras reducido */
+        padding-top: 5px; /* Ajuste del padding superior para pantallas medianas */
+        margin: 30px 0 -10px; /* Margen estándar */
+    }
+}
+
+@media (max-width: 480px) {
+    .special-pricing-title {
+        font-size: 25px; /* Tamaño de la fuente aumentado para pantallas pequeñas */
+        letter-spacing: 0.5px; /* Espaciado de letras aún más reducido */
+        padding-top: 2px; /* Ajuste del padding superior para pantallas muy pequeñas */
+        margin: 20px 0 -10px; /* Margen estándar */
+        z-index: -1;
+    }
+}
+
+
+
+
+  /* Contenedor del carrusel */
+  .product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+
+  
+  .product-item {
+    flex: 0 0 auto;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    scroll-snap-align: start; /* Asegura que el producto comience en su lugar correcto */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-item p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .new-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+  }
+  
+  .discount-label {
+    background-color: #f44336;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* Modo móvil */
+  @media screen and (max-width: 768px) {
+    .product-carousel {
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .product-item {
+      width: 180px;
+    }
+  
+    .product-item p {
+      font-size: 14px;
+    }
+  
+    .old-price {
+      font-size: 12px;
+    }
+  
+    .new-price {
+      font-size: 16px;
+    }
+  
+    .discount-label {
+      font-size: 10px;
+    }
+  }
+
+
+
+
+
+
+
+footer {
+    
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid #e5b95f;
+    box-sizing: border-box;
+}
+
+.footer-top {
+    padding: 20px 0;
+}
+
+.footer-title {
+    font-size: 36px;
+    margin: 0;
+    color: #e5b95f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 15px;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #e5b95f;
+    font-weight: 700;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e5b95f;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e5b95f;
+}
+
+.footer-bottom {
+    background-color: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #e5b95f;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-title {
+        font-size: 28px;
+    }
+
+    .footer-section h4 {
+        font-size: 14px;
+    }
+
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+}
+
+
+
+.whatsapp-float {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebf59;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+}
+
+.whatsapp-float a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 75px;
+    right: -5px;
+    background-color: white;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+
+/* EliMINA DE ANILLO ENLACE */
+.category-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Usa el color del texto del elemento padre */
+    display: block; /* Hace que el enlace ocupe el espacio completo del div */
+  }
+  
